@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>sena @ lichtlabs</title>
+    <link rel="stylesheet" href="style.css" />
+    <!-- UnoCSS -->
+    <script src="https://cdn.jsdelivr.net/npm/@unocss/runtime"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@unocss/reset/tailwind.min.css"
+    />
+    <!-- htmx -->
+    <script src="https://unpkg.com/htmx.org@2.0.2"></script>
+  </head>
+  <body
+    id="root"
+    class="bg-zinc-100 text-zinc-600 dark:text-zinc-300 dark:bg-zinc-800"
+  >
+    <header id="header">
+      <div class="w-full py px4 border-black flex justify-between">
+        <a
+          hx-get="/"
+          hx-swap="innerHTML transition:true"
+          hx-target="#root"
+          rel="noopener noreferrer"
+          class="underline text-lg"
+        >
+          sena@lichtlabs.org
+        </a>
+        <button
+          onclick="toggleTheme()"
+          class="grid place-content-center rounded-md border-black dark:invert border w-7"
+        >
+          <img
+            class="w-4 h-4"
+            src="https://unpkg.com/lucide-static@0.435.0/icons/moon-star.svg"
+          />
+        </button>
+      </div>
+      <div
+        class="flex flex-col text-sm mt1 pb px overflow-x-scroll border-b border-zinc-400 dark:border-zinc-600 [&>a]:mb-4"
+      >
+        <a
+          hx-get="/about.html"
+          hx-swap="innerHTML transition:true"
+          hx-target="#root"
+          rel="noopener noreferrer"
+        >
+          <span class="underline underline-offset-8">about</span> (・・ ) ?
+        </a>
+        <a
+          hx-get="/contact.html"
+          hx-swap="innerHTML transition:true"
+          hx-target="#root"
+          rel="noopener noreferrer"
+        >
+          <span class="underline underline-offset-8">contact</span>
+          (ᗒ⩊ᗕ)
+        </a>
+        <a href="/soon.html" rel="noopener noreferrer">
+          <span class="underline underline-offset-8">blog</span> __〆(￣ー￣ )
+        </a>
+        <a href="/soon.html" rel="noopener noreferrer">
+          <span class="underline underline-offset-8">projects</span>
+          ☆*:.｡.o(≧▽≦)o.｡.:*☆
+        </a>
+      </div>
+    </header>
+    <main class="py px">
+      <h1 class="sr-only">Aryasena Putra, Software Engineer @ Lichtlabs</h1>
+      <p class="font-mono">
+        halo (￣▽￣)ノ saya aryasena, <br />
+        sang software dev handal (｡•̀ᴗ-)✧
+      </p>
+      <div class="w-full h-1 bg-red-200 mt2.5 mb1 max-w[20rem]"></div>
+      <div class="flex items-center gap-x1.5">
+        <a
+          href="https://lichtlabs.org"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="underline text-xs"
+        >
+          lichtlabs.org
+        </a>
+        ·
+        <a
+          href="https://github.com/aryasena0"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="underline text-xs"
+        >
+          github.com/aryasena0
+        </a>
+        ·
+        <a
+          href="#"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="underline text-xs"
+        >
+          x.com/xas*****
+        </a>
+      </div>
+    </main>
+    <footer class="fixed bottom-0 left-0 w-full">
+      <div class="py px4 border-t border-black dark:border-white mx-auto">
+        <p class="text-xs">© 2021 aryasena. all rights reserved. ٩(ˊ〇ˋ*)و</p>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
