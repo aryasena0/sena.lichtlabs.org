@@ -28,3 +28,13 @@ window
 
     html.classList.remove("dark");
   });
+
+function getFooterCopyrightText() {
+  const year = new Date().getFullYear();
+  const template = `© ${year} aryasena. all rights reserved. ٩(ˊ〇ˋ*)و`;
+
+  return template;
+}
+
+const footerCopyrightText = document.getElementById("footer-copy-text");
+footerCopyrightText.innerText = getFooterCopyrightText();
